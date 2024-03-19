@@ -1064,6 +1064,9 @@
     "header": {
       "name": "Header",
       "settings": {
+        "show_heading": {
+          "label": "Show heading"
+        },
         "logo_help": {
           "content": "Edit your logo in [theme settings](/editor?context=theme&category=logo)."
         },
