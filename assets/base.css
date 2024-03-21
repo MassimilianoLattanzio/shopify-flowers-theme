@@ -502,7 +502,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 16px;
   font-family: inherit;
 }
 
@@ -2419,7 +2419,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
     grid-template-columns: auto auto 1fr;
-    column-gap: 2rem;
+    column-gap: 0rem;
   }
 
   .header--middle-center:not(.drawer-menu) {
