@@ -153,6 +153,16 @@
     "settings": [
       {
         "type": "range",
+        "id": "homepage_columns",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 1,
+        "unit": "col",
+        "label": "t:settings_schema.layout.settings.homepage_columns.label"
+      },
+      {
+        "type": "range",
         "id": "page_width",
         "min": 1000,
         "max": 1600,
