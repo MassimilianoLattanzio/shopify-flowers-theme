@@ -84,3 +84,20 @@
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
 }
+
+.rich-text__image.rich-text__image--left {
+  width: 50%;
+  float: left;
+  margin-right: 15px;
+}
+
+.rich-text__image.rich-text__image--center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rich-text__image.rich-text__image--right {
+  width: 50%;
+  float: right;
+  margin-left: 15px;
+}

@@ -2930,6 +2930,29 @@
               "label": "Use outline button style"
             }
           }
+        },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "image_alignment": {
+              "label": "Image alignment",
+              "options__1": {
+                "label": "None"
+              },
+              "options__2": {
+                "label": "Left"
+              },
+              "options__3": {
+                "label": "Center"
+              },
+              "options__4": {
+                "label": "Right"
+              }
+            }
+          }
         }
       },
       "presets": {

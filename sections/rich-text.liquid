@@ -87,6 +87,20 @@
                   </a>
                 {%- endif -%}
               </div>
+            {%- when 'image' -%}
+              {%- liquid
+                assign image_class = 'rich-text__image'
+                if block.settings.image_alignment != 'none'
+                  assign image_class = 'rich-text__image rich-text__image--' | append: block.settings.image_alignment
+                endif
+              -%}
+              {{
+                block.settings.image
+                | image_url: width: 3200
+                | image_tag:
+                  widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                  class: image_class
+              }}
           {%- endcase -%}
         {%- endfor -%}
       </div>
@@ -320,6 +334,41 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:sections.rich-text.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.rich-text.blocks.image.settings.image.label"
+        },
+        {
+          "type": "select",
+          "id": "image_alignment",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.rich-text.blocks.image.settings.image_alignment.options__1.label"
+            },
+            {
+              "value": "left",
+              "label": "t:sections.rich-text.blocks.image.settings.image_alignment.options__2.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.rich-text.blocks.image.settings.image_alignment.options__3.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.rich-text.blocks.image.settings.image_alignment.options__4.label"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.rich-text.blocks.image.settings.image_alignment.label"
         }
       ]
     }
