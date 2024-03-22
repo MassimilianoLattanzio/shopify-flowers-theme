@@ -94,7 +94,7 @@ html.no-js .no-js-hidden {
 }
 
 .page-width {
-  max-width: var(--page-width);
+  /*max-width: var(--page-width);*/
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -296,6 +296,7 @@ h5,
 
 .h0 {
   font-size: calc(var(--font-heading-scale) * 4rem);
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 750px) {
@@ -2379,9 +2380,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
   background-color: rgb(var(--color-background));
 }
 
-.header-wrapper--border-bottom {
+/*.header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
+}*/
 
 .header {
   display: grid;

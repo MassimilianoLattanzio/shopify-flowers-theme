@@ -1,1 +1,186 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"h0"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image_overlay_opacity":40,"image_height":"large","desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"inverse","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}}},"order":["image_banner","featured_collection"]}
+{
+  "sections": {
+    "rich_text_9aqm7C": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HdpfWE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kyiv LuxeBouquets®",
+            "heading_size": "h1"
+          }
+        },
+        "text_HPhQCh": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service<\/em><\/p>"
+          }
+        },
+        "text_DXqeiX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.<\/p>"
+          }
+        },
+        "image_jcjUWx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/64342f309677e91673ff10b2_6408c60b24ddda5335e4d752_Heath_Carousel_2520copy.webp"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HdpfWE",
+        "text_HPhQCh",
+        "text_DXqeiX",
+        "image_jcjUWx"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collection_list_LhRpTR": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_fi6YWn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fresh-flowers"
+          }
+        },
+        "featured_collection_xrtPAK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dried-flowers"
+          }
+        },
+        "featured_collection_T3Cg6J": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "live-plants"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_fi6YWn",
+        "featured_collection_xrtPAK",
+        "featured_collection_T3Cg6J"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_nypKKx": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PHfcG7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_8adpiG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_KKMxaK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PHfcG7",
+        "text_8adpiG",
+        "button_KKMxaK"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_irBGbp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LTxKzp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_HtGHqd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_TfhxXm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LTxKzp",
+        "text_HtGHqd",
+        "button_TfhxXm"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "rich_text_9aqm7C",
+    "collection_list_LhRpTR",
+    "image_with_text_nypKKx",
+    "image_with_text_irBGbp"
+  ]
+}
