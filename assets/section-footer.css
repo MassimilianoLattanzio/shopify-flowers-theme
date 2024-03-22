@@ -3,12 +3,16 @@
 }
 
 .footer:not(.color-scheme-1) {
-  border-top: none;
+  border-top: 1px solid black;
 }
 
 .footer__content-top {
   padding-bottom: 5rem;
   display: block;
+}
+
+.footer .page-width {
+  padding: 0;
 }
 
 @media screen and (max-width: 749px) {
@@ -35,8 +39,25 @@
 
 @media screen and (min-width: 750px) {
   .footer__content-top .grid {
+    column-gap: 0;
     row-gap: 6rem;
     margin-bottom: 0;
+  }
+
+  .footer-block.grid__item {
+    padding: 40px;
+    border-bottom: 1px solid black;
+  }
+
+  .footer-block.grid__item:not(:last-child) {
+    border-right: 1px solid black;
+  }
+
+  .footer-block.grid__item em {
+    color: #808080;
+    font-style: normal;
+    margin-top: 25px;
+    display: block;
   }
 }
 
