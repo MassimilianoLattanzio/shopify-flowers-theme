@@ -1587,6 +1587,9 @@
           "label": "Desktop image placement",
           "info": "Placement is automatically optimized for mobile."
         },
+        "button_label": {
+          "label": "Button label"
+        },
         "container_color_scheme": {
           "label": "Container color scheme"
         },
