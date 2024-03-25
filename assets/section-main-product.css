@@ -13,6 +13,8 @@
 
 .product__media-wrapper {
   padding-left: 0;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 @media screen and (min-width: 750px) {
@@ -28,7 +30,8 @@
   }
 
   .product__info-wrapper {
-    padding: 0 0 0 5rem;
+    padding: 40px;
+    border-bottom: 1px solid black;
   }
 
   .product__info-wrapper--extra-padding {
@@ -322,6 +325,7 @@ a.product__text {
 
 .product__tax {
   margin-top: -1.4rem;
+  display: none;
 }
 
 .product--no-media noscript .product-form__input,
@@ -366,9 +370,9 @@ a.product__text {
   margin-bottom: 1.2rem;
 }
 
-.product-form__buttons {
+/*.product-form__buttons {
   max-width: 44rem;
-}
+}*/
 
 .product--no-media .product__info-container > modal-opener {
   display: block;

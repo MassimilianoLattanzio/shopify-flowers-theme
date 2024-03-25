@@ -1,7 +1,16 @@
 .related-products {
   display: block;
+  padding: 0;
 }
 
 .related-products__heading {
-  margin: 0 0 3rem;
+  margin: 0/* 0 3rem*/;
+  padding: 80px 10px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.related-products .card__information,
+.related-products .card-information {
+  text-align: center;
 }
