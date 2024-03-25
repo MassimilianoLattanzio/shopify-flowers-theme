@@ -295,7 +295,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {%- if request.page_type == 'index' -%}
+      {%- if request.page_type == 'index' or request.page_type == 'collection' -%}
         <div class="md:tw-grid md:tw-grid-cols-{{ settings.homepage_columns }}">
       {%- endif -%}
         {{ content_for_layout }}
