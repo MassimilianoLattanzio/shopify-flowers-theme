@@ -620,6 +620,14 @@ video {
   border-right-width: 1px;
 }
 
+.tw-border-0 {
+  border-width: 0px;
+}
+
+.\!tw-border-0 {
+  border-width: 0px !important;
+}
+
 .tw-border-b-\[1px\] {
   border-bottom-width: 1px;
 }
@@ -634,6 +642,14 @@ video {
 
 .tw-border-r-\[1px\] {
   border-right-width: 1px;
+}
+
+.\!tw-border-b-\[1px\] {
+  border-bottom-width: 1px !important;
+}
+
+.\!tw-border-r-\[1px\] {
+  border-right-width: 1px !important;
 }
 
 .tw-border-black {
