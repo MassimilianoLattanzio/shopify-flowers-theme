@@ -396,7 +396,9 @@
       "padding": {
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
-        "padding_bottom": "Bottom padding"
+        "padding_bottom": "Bottom padding",
+        "padding_x": "Horizontal padding",
+        "padding_y": "Vertical padding"
       },
       "spacing": "Spacing",
       "colors": {
@@ -2827,6 +2829,19 @@
           },
           "options__2": {
             "label": "2 columns"
+          }
+        }
+      }
+    },
+    "about-us": {
+      "name": "About us",
+      "blocks": {
+        "title": {
+          "name": "Title",
+          "settings": {
+            "heading": {
+              "label": "Title"
+            }
           }
         }
       }
