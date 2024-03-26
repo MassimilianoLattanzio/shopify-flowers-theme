@@ -90,8 +90,8 @@
                             class="cart-item__image"
                             alt="{{ item.image.alt | escape }}"
                             loading="lazy"
-                            width="150"
-                            height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
+                            width="160"
+                            height="{{ 160 | divided_by: item.image.aspect_ratio | ceil }}"
                           >
                         </div>
                       {% endif %}
@@ -116,13 +116,17 @@
                             {{ 'products.product.price.sale_price' | t }}
                           </span>
                           <strong class="cart-item__final-price product-option">
-                            {{ item.final_price | money }}
+                            {{ item.final_line_price | money }}
                           </strong>
                         </div>
                       {%- else -%}
+                      <div class="product-quantity tw-text-base">
+                        {{ 'products.product.quantity.label' | t }} ({{ item.quantity }})
+                      </div>
                         <div class="product-option">
-                          {{ item.original_price | money }}
+                          {{ item.final_line_price | money }}
                         </div>
+                        
                       {%- endif -%}
 
                       {%- if item.product.has_only_default_variant == false
@@ -230,7 +234,7 @@
                           <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                             {{ 'products.product.quantity.label' | t }}
                           </label>
-                          <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
+                          <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %} visually-hidden">
                             {%- if has_qty_rules or has_vol_pricing -%}
                               <button
                                 type="button"
@@ -282,7 +286,8 @@
                               class="button button--tertiary"
                               aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                             >
-                              {% render 'icon-remove' %}
+                              {% #render 'icon-remove' %}
+                              {{ 'products.facets.clear_all' | t }}
                             </a>
                           </cart-remove-button>
                         </div>
@@ -386,7 +391,7 @@
                       </quantity-popover>
                     </td>
 
-                    <td class="cart-item__totals right small-hide">
+                    <td class="cart-item__totals right small-hide visually-hidden">
                       {%- render 'loading-spinner' -%}
                       <div class="cart-item__price-wrapper">
                         {%- if item.original_line_price != item.final_line_price -%}

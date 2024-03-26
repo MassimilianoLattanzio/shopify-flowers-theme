@@ -70,7 +70,7 @@ cart-items {
 }
 
 .cart__footer > div:only-child {
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .cart__footer > * + * {
@@ -120,7 +120,8 @@ cart-items {
   .cart__items {
     grid-column-start: 1;
     grid-column-end: 3;
-    padding-bottom: 4rem;
+    padding: 0;
+    border: 0;
   }
 
   .cart__contents > * + * {
@@ -148,6 +149,10 @@ cart-items {
   .cart__footer > * + * {
     margin-left: 4rem;
     margin-top: 0;
+  }
+
+  .cart__footer > div:only-child {
+    width: 720px;
   }
 }
 
@@ -212,7 +217,7 @@ cart-items {
 
   .tax-note {
     margin-bottom: 2.2rem;
-    text-align: right;
+    text-align: center;
   }
 
   [data-shopify-buttoncontainer] {
@@ -222,5 +227,6 @@ cart-items {
   .cart__ctas {
     display: flex;
     gap: 1rem;
+    justify-content: center;
   }
 }
