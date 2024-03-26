@@ -1,1 +1,146 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"background-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","media_position":"left","image_zoom":"lightbox","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"background-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}}},"order":["main","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_liquid_wFbLLU": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .breadcrumbs {\n    margin: 0 0 2em;\n    font-size: 14px;\n  }\n\n  .breadcrumbs__list {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n  }\n\n  .breadcrumbs__item {\n    display: inline-block;\n    text-transform: uppercase;\n  }\n\n  .breadcrumbs__item:last-child {\n    color: #808080;\n  }\n\n  .breadcrumbs__link {\n    text-decoration: underline;\n  }\n\n  .breadcrumbs__link[aria-current=\"page\"] {\n    color: inherit;\n    font-weight: normal;\n    text-decoration: none;\n  }\n\n  .breadcrumbs__link[aria-current=\"page\"]:hover,\n  .breadcrumbs__link[aria-current=\"page\"]:focus {\n    text-decoration: underline;\n  }\n<\/style>\n\n{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}\n{%- assign t = template | split: '.' | first -%}\n\n<nav class=\"breadcrumbs\" role=\"navigation\" aria-label=\"breadcrumbs\">\n  <ol class=\"breadcrumbs__list\">\n    <li class=\"breadcrumbs__item\">\n      <a class=\"breadcrumbs__link\" href=\"\/\">Home<\/a>\n    <\/li>\n    <li class=\"breadcrumbs__item\"><span class=\"separator\">\/<\/span><\/li>\n    {%- case t -%}\n      {%- when 'page' -%}\n        <li class=\"breadcrumbs__item\">\n          {{ page.title }}\n        <\/li>\n      {%- when 'product' -%}\n        {%- if collection.url -%}\n          <li class=\"breadcrumbs__item\">\n            {{ collection.title | link_to: collection.url }}\n          <\/li>\n          <li class=\"breadcrumbs__item\"><span class=\"separator\">\/<\/span><\/li>\n        {%- endif -%}\n        <li class=\"breadcrumbs__item\">\n          {{ product.title }}\n        <\/li>\n      {%- when 'collection' and collection.handle -%}\n        {%- if current_tags -%}\n          <li class=\"breadcrumbs__item\">\n            {{ collection.title | link_to: collection.url }}\n          <\/li>\n          <li class=\"breadcrumbs__item\"><span class=\"separator\">\/<\/span><\/li>\n          <li class=\"breadcrumbs__item\">\n            {%- capture tag_url -%}{{ collection.url }}\/{{ current_tags | join: \"+\"}}{%- endcapture -%}\n            {{ current_tags | join: \" + \"}}\n          <\/li>\n        {%- else -%}\n          <li class=\"breadcrumbs__item\">\n            {{ collection.title }}\n          <\/li>\n        {%- endif -%}\n      {%- when 'blog' -%}\n        {%- if current_tags -%}\n          <li class=\"breadcrumbs__item\">\n            {{ blog.title | link_to: blog.url }}\n          <\/li>\n          <li class=\"breadcrumbs__item\"><span class=\"separator\">\/<\/span><\/li>\n          <li class=\"breadcrumbs__item\">\n            {%- capture tag_url -%}{{blog.url}}\/tagged\/{{ current_tags | join: \"+\" }}{%- endcapture -%}\n            {{ current_tags | join: \" + \" }}\n          <\/li>\n        {%- else -%}\n          <li class=\"breadcrumbs__item\">\n            {{ blog.title }}\n          <\/li>\n        {%- endif -%}\n      {%- when 'article' -%}\n        <li class=\"breadcrumbs__item\">\n          {{ blog.title | link_to: blog.url }}\n        <\/li>\n        <li class=\"breadcrumbs__item\"><span class=\"separator\">\/<\/span><\/li>\n        <li class=\"breadcrumbs__item\">\n          {{ article.title }}\n        <\/li>\n      {%- else -%}\n        <li class=\"breadcrumbs__item\">\n          {{ page_title }}\n        <\/li>\n    {%- endcase -%}\n  <\/ol>\n<\/nav>\n{%- endunless -%}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_wFbLLU",
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "custom_css": [
+        ".grid {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "background-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "gallery_layout": "columns",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like...",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "about_us_bVgqFa": {
+      "type": "about-us",
+      "blocks": {
+        "title_QyYJrh": {
+          "type": "title",
+          "settings": {
+            "title": "About us",
+            "heading_size": "h0"
+          }
+        },
+        "caption_GqeHUL": {
+          "type": "caption",
+          "settings": {
+            "caption": "our story",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "heading_EJzNMr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kyiv LuxeBouquets",
+            "heading_size": "h1"
+          }
+        },
+        "text_eBHgkA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are a modern local floral studio, which specializes in the design and delivery of unique bouquets. We have the best florists who carefully select each look, our studio cooperates directly with farms for growing different flowers, so we always have fresh flowers, which are collected by our florists in exquisite bouquets. We have a collection of fresh bouquets, collections of dried bouquets, house plants, as well as fragrant candles from luxury brands to create the perfect atmosphere. Make someone's day amazing by sending flowers, plants and gifts the same or next day. Ordering flowers online has never been easier.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_QyYJrh",
+        "caption_GqeHUL",
+        "heading_EJzNMr",
+        "text_eBHgkA"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_x": 80,
+        "padding_y": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "about_us_bVgqFa"
+  ]
+}

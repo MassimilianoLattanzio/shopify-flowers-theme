@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "Kyiv LuxeBouquets®",
-            "heading_size": "h1"
+            "heading_size": "h0"
           }
         },
         "text_HPhQCh": {
@@ -16,24 +16,28 @@
             "text": "<p><em>Discover Uniquely Crafted Bouquets and Gifts for Any Occasion: Spread Joy with Our Online Flower Delivery Service<\/em><\/p>"
           }
         },
+        "image_jcjUWx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/64342f309677e91673ff10b2_6408c60b24ddda5335e4d752_Heath_Carousel_2520copy.webp",
+            "image_alignment": "left"
+          }
+        },
         "text_DXqeiX": {
           "type": "text",
           "settings": {
             "text": "<p>Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.<\/p>"
-          }
-        },
-        "image_jcjUWx": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/64342f309677e91673ff10b2_6408c60b24ddda5335e4d752_Heath_Carousel_2520copy.webp"
           }
         }
       },
       "block_order": [
         "heading_HdpfWE",
         "text_HPhQCh",
-        "text_DXqeiX",
-        "image_jcjUWx"
+        "image_jcjUWx",
+        "text_DXqeiX"
+      ],
+      "custom_css": [
+        "{border-bottom: 1px solid black;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -44,22 +48,22 @@
         "padding_bottom": 52
       }
     },
-    "collection_list_LhRpTR": {
-      "type": "collection-list",
+    "collection_multirow_XTCQpM": {
+      "type": "collection-multirow",
       "blocks": {
-        "featured_collection_fi6YWn": {
+        "featured_collection_6ctj3w": {
           "type": "featured_collection",
           "settings": {
             "collection": "fresh-flowers"
           }
         },
-        "featured_collection_xrtPAK": {
+        "featured_collection_BFLWtc": {
           "type": "featured_collection",
           "settings": {
             "collection": "dried-flowers"
           }
         },
-        "featured_collection_T3Cg6J": {
+        "featured_collection_MXpKKr": {
           "type": "featured_collection",
           "settings": {
             "collection": "live-plants"
@@ -67,120 +71,86 @@
         }
       },
       "block_order": [
-        "featured_collection_fi6YWn",
-        "featured_collection_xrtPAK",
-        "featured_collection_T3Cg6J"
+        "featured_collection_6ctj3w",
+        "featured_collection_BFLWtc",
+        "featured_collection_MXpKKr"
       ],
       "settings": {
-        "title": "Collections",
+        "image_height": "small",
+        "desktop_image_width": "medium",
         "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-right",
+        "button_label": "Shop now",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "image_with_text_nypKKx": {
-      "type": "image-with-text",
+    "custom_liquid_Rm6MwF": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".gradient {padding-top: 40px; padding-bottom: 52px; padding-left: 5rem; padding-right: 5rem; height: 100%;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div id=\"about-us\">\n<h3 class=\"h0\">\nAbout us\n<\/h3>\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_hyCXxq": {
+      "type": "rich-text",
       "blocks": {
-        "heading_PHfcG7": {
+        "caption_GzhKcj": {
+          "type": "caption",
+          "settings": {
+            "caption": "OUR STORY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "heading_JfLdGH": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Kyiv LuxeBouquets",
             "heading_size": "h1"
           }
         },
-        "text_8adpiG": {
+        "text_Heq83R": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_KKMxaK": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "text": "<p>We are a modern local floral studio, which specializes in the design and delivery of unique bouquets. We have the best florists who carefully select each look, our studio cooperates directly with farms for growing different flowers, so we always have fresh flowers, which are collected by our florists in exquisite bouquets. We have a collection of fresh bouquets, collections of dried bouquets, house plants, as well as fragrant candles from luxury brands to create the perfect atmosphere. Make someone's day amazing by sending flowers, plants and gifts the same or next day. Ordering flowers online has never been easier.<\/p>"
           }
         }
       },
       "block_order": [
-        "heading_PHfcG7",
-        "text_8adpiG",
-        "button_KKMxaK"
+        "caption_GzhKcj",
+        "heading_JfLdGH",
+        "text_Heq83R"
+      ],
+      "custom_css": [
+        "{border-left: 1px solid black;}"
       ],
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
+        "desktop_content_position": "center",
+        "content_alignment": "left",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_irBGbp": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_LTxKzp": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_HtGHqd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "button_TfhxXm": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_LTxKzp",
-        "text_HtGHqd",
-        "button_TfhxXm"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "rich_text_9aqm7C",
-    "collection_list_LhRpTR",
-    "image_with_text_nypKKx",
-    "image_with_text_irBGbp"
+    "collection_multirow_XTCQpM",
+    "custom_liquid_Rm6MwF",
+    "rich_text_hyCXxq"
   ]
 }
