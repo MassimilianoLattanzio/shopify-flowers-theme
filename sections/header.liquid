@@ -199,11 +199,15 @@
     {%- endif -%}
 
     {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
+      if request.page_type == 'cart'
+        render 'header-cart'
+      else
+        if section.settings.menu != blank
+          if section.settings.menu_type_desktop == 'dropdown'
+            render 'header-dropdown-menu'
+          elsif section.settings.menu_type_desktop != 'drawer'
+            render 'header-mega-menu'
+          endif
         endif
       endif
     %}
@@ -322,24 +326,30 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="tw-px-8 tw-py-4 tw-border-l-[1px] tw-border-black !tw-flex tw-h-full tw-items-center tw-min-w-[180px] tw-justify-center focus-inset" id="cart-icon-bubble">
-        {%- liquid
-          if cart == empty
-            # render 'icon-cart-empty'
-          else
-            # render 'icon-cart'
-          endif
-        -%}
-        <span>{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble visually-hidden">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
-      </a>
+      {%- if request.page_type != 'cart' -%}
+        <a href="{{ routes.cart_url }}" class="tw-px-8 tw-py-4 tw-border-l-[1px] tw-border-black !tw-flex tw-h-full tw-items-center tw-min-w-[180px] tw-justify-center focus-inset" id="cart-icon-bubble">
+          {%- liquid
+            if cart == empty
+              # render 'icon-cart-empty'
+            else
+              # render 'icon-cart'
+            endif
+          -%}
+          <span>{{ 'templates.cart.cart' | t }}</span>
+          {%- if cart != empty -%}
+            <div class="cart-count-bubble visually-hidden">
+              {%- if cart.item_count < 100 -%}
+                <span aria-hidden="true">{{ cart.item_count }}</span>
+              {%- endif -%}
+              <span>{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+            </div>
+          {%- endif -%}
+        </a>
+      {%- else -%}
+        <a href="javascript:history.back()" class="tw-px-8 tw-flex tw-h-full tw-w-[55px] tw-items-center tw-justify-center focus-inset">
+          {% render 'icon-close' %}
+        </a>
+      {%- endif -%}
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>

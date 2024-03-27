@@ -564,6 +564,26 @@ video {
   height: 100%;
 }
 
+.tw-h-\[64px\] {
+  height: 64px;
+}
+
+.tw-w-\[80px\] {
+  width: 80px;
+}
+
+.tw-w-\[40px\] {
+  width: 40px;
+}
+
+.tw-w-\[55px\] {
+  width: 55px;
+}
+
+.tw-font-bold {
+  font-weight: 700;
+}
+
 .tw-min-w-\[180px\] {
   min-width: 180px;
 }
