@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    foreman (0.90.0)
+      thor (~> 1.4)
+    thor (1.4.0)
+
+PLATFORMS
+  arm64-darwin-25
+  ruby
+
+DEPENDENCIES
+  foreman (~> 0.90.0)
+
+BUNDLED WITH
+   2.7.2
