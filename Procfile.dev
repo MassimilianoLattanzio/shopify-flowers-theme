@@ -1,0 +1,2 @@
+web: pnpm shopify theme dev
+tailwind: pnpm tailwindcss -i ./assets/app-tailwind.css -o ./assets/tailwind-output.css --watch
