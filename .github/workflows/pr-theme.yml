@@ -1,0 +1,48 @@
+name: PR Theme Management
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed, labeled]
+
+# Cancel in-progress runs for the same PR
+concurrency:
+  group: pr-theme-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  manage-theme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    # Security: Only run for PRs from the same repository (not forks)
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+      
+    steps:
+      - name: Checkout code
+        if: github.event.action != 'closed' && (github.event.action != 'labeled' || github.event.label.name == 'rebuild-theme')
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Deploy/Update PR Theme
+        if: github.event.action != 'closed' && (github.event.action != 'labeled' || github.event.label.name == 'rebuild-theme')
+        uses: ShopLab-Team/shoplab-pr-shopify-theme-preview@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          shopify-store-url: ${{ secrets.SHOP_STORE }}
+          shopify-cli-theme-token: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          action-type: 'deploy'
+
+      - name: Cleanup PR Theme
+        if: github.event.action == 'closed'
+        uses: ShopLab-Team/shoplab-pr-shopify-theme-preview@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          shopify-store-url: ${{ secrets.SHOP_STORE }}
+          shopify-cli-theme-token: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          action-type: 'cleanup'
